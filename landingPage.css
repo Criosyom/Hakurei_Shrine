@@ -7,12 +7,186 @@ body {
     margin: 0;
 }
 
+.border {
+    /* border: 2px solid white;*/
+
+}
+
 #background {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     object-fit: cover;
     top: 0;
     left: 0;
     filter: brightness(1.2);
+    z-index: -2;
+}
+
+.headerBar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-decoration: none;
+}
+
+.leftBarContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 16em;
+}
+
+.logoContainer {
+    margin: 0.7em 0 0.7em 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 8.8em;
+    text-decoration: none;
+}
+
+.logoHakurei {
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    width: 5.2em;
+    letter-spacing: 0.1em;
+}
+
+.logoImageContainer {
+    display: flex;
+    align-items: center;
+}
+
+.logoImage {
+    width: 2em;
+}
+
+#audioController {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+#audioController:hover {
+    filter: brightness(0.8);
+}
+
+.rightBarContainer {
+    color: white;
+    width: 25em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 3em;
+
+}
+
+.separator {
+    width: 2.5em;
+    height: 2.5em;
+    filter: hue-rotate(140deg);
+}
+
+.about, .characters, .music, .contact {
+    font-size: 1.1em;
+}
+
+.layer1 {
+    
+}
+
+.layer1Bg {
+    width: 90%;
+    height: 100%;
+    border-radius: 1.5em;
+    margin: 6em auto 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 2em rgb(90, 90, 90);
+}
+
+.layer1Left {
+    color: white;
+    margin: 3em 2em 3em 5em;
+    width: 35em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.greetings {
+    font-size: 2.5em;
+    text-shadow: 0 0 0.8em rgb(255, 255, 255);
+}
+
+.description {
+    margin-top: 1em;
+    font-size: 1.1em;
+    line-height: 1.4em;
+}
+
+.donateNowContainer {
+    margin-top: 3em;
+}
+
+.donateNow {
+    color: white;
+    border: 0.2em solid white;
+    border-radius: 2em;
+    width: 10em;
+    height: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    font-size: 1.2em;
+    text-decoration: none;
+    background:rgba(190, 26, 26, 0.5);
+
+}
+
+.donateNow:hover {
+    transition: 0.3s;
+    transform: translateY(-3%);
+    background:rgba(221, 55, 49, 0.8);
+    box-shadow: 0 0 0.6em white;
+    
+}
+
+.layer1Right {
+    width: 45em;
+    margin: 3em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.layer1Image {
+    width: 80%;
+    box-shadow: 0em 0em 1em rgb(192, 192, 192);
+}
+
+.layer1Caption {
+    color: white;
+    margin-top: 0.5em;
+    font-size: 1.1em;
+}
+
+.layer1ImageSource {
+    color: white;
+    font-size: 0.9em;
+
 }

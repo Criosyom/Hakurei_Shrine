@@ -7,19 +7,69 @@
     <link href = "landingPage.css" rel = "stylesheet">
     <title>Hakurei Shrine</title>
 </head>
-<body>
-
-    <div onmouseover = playMusic()>
+<body onclick = "playMusic()">
+    <div class = "backgroundContainer">
         <video id = "background" muted autoplay loop> 
             <source src = "resources/touhouBackground.mp4" type = "video/mp4"></src>
         </video>
 
-        <audio id="backgroundMusic" loop>
+        <audio id = "backgroundMusic" loop>
             <source src="resources/touhouBackgroundMusic.mp3" type="audio/mp3">
         </audio>
     </div>
-    
-    <script> 
+
+    <div class = "headerBar">
+        <div class = "leftBarContainer">
+            <a class = "logoContainer" href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                <div class = "logoImageContainer">
+                    <img class = "logoImage" src = "resources/redWhiteYinYang.png">
+                </div>
+                <div class = "logoHakurei">
+                    Hakurei
+                </div>
+            </a>
+            <img id = "audioController" src = "resources/audioControllerOn.png" onclick = "audioController(); imageChange();">
+        </div>
+        <div class = "rightBarContainer">
+            <a class = "about">About</a>
+            <img class = "separator" src = "resources/glowySquare.png">
+            <a class = "characters">Characters</a>
+            <img class = "separator" src = "resources/glowySquare.png">
+            <a class = "music">FAQ</a>
+            <img class = "separator" src = "resources/glowySquare.png">
+            <a class = "contact">Contact</a>
+        </div>
+    </div>
+
+    <div class = "layer1">
+        <div class = "layer1Bg">
+            <div class = "layer1Left">
+                <div class = "greetings">
+                    Welcome to the Hakurei Shrine
+                </div>
+                <div class = "description">
+                    Home of Touhou Project's protagonist, Reimu Hakurei. The shrine serves to protect the land of Gensokyo from the outside world by maintaining the Great Hakurei Barrier. Donations are greatly appeciated!
+                </div>
+                <div class = "donateNowContainer">
+                    <a class = "donateNow" href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ">Donate Now!</a>
+                </div>
+            </div>
+            <div class = "layer1Right">
+                <img class = "layer1Image" src = "resources/blossomViewing.jpg">
+                <div class = "layer1Caption">
+                    Reimu and her friends viewing cherry blossoms
+                </div>
+                <div class = "layer1ImageSource">Image Source: <a class = "layer1ImageSource" href = "https://www.pixiv.net/en/artworks/47004232">NEKO♨ RE.TH on pixiv</a></div>
+            </div>
+        </div>
+    </div>
+
+    <div class = "layer2">
+
+    </div>
+
+</body>
+<script> 
     var vAudio = document.getElementById("backgroundMusic");
      var hasInit = false;
      function playMusic() {
@@ -35,6 +85,31 @@
             audio.volume = 1;
             audio.play();
         });
+
+        const audioStatus = document.getElementById("backgroundMusic")
+
+        function audioController() {
+           if (!audioStatus.paused) {
+                audioStatus.pause();
+            }
+           else {
+               audioStatus.play();
+           }
+        }
+
+        imageTracker = "i"
+        function imageChange() {
+            var image = document.getElementById("audioController");
+            
+
+            if (imageTracker == "i"){
+                image.src = "resources/audioControllerOff.png"
+                imageTracker = "I"
+            }
+            else {
+                image.src = "resources/audioControllerOn.png"
+                imageTracker = "i"
+            }
+        }
     </script>
-</body>
 </html>
