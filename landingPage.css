@@ -31,6 +31,9 @@ body {
     align-items: center;
     background-color: rgba(0, 0, 0, 0.7);
     text-decoration: none;
+    position: fixed;
+    top: 0;
+    z-index: 3;
 }
 
 .leftBarContainer {
@@ -108,19 +111,19 @@ body {
     width: 90%;
     height: 100%;
     border-radius: 1.5em;
-    margin: 6em auto 0 auto;
+    margin: 9em auto 0 auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.7);
-    box-shadow: 0 0 2em rgb(90, 90, 90);
+    box-shadow: 0 0 2em rgb(68, 68, 68);
 }
 
 .layer1Left {
     color: white;
     margin: 3em 2em 3em 5em;
-    width: 35em;
+    width: 40vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -130,12 +133,14 @@ body {
 .greetings {
     font-size: 2.5em;
     text-shadow: 0 0 0.8em rgb(255, 255, 255);
+    text-align: center;
 }
 
 .description {
     margin-top: 1em;
     font-size: 1.1em;
     line-height: 1.4em;
+    text-align: justify;
 }
 
 .donateNowContainer {
@@ -176,7 +181,7 @@ body {
 
 .layer1Image {
     width: 80%;
-    box-shadow: 0em 0em 1em rgb(192, 192, 192);
+    box-shadow: 0em 0em 1em rgb(182, 182, 182);
 }
 
 .layer1Caption {
@@ -189,4 +194,108 @@ body {
     color: white;
     font-size: 0.9em;
 
+}
+
+.layer2 {
+    margin-bottom: 9em;
+}
+
+.layer2Bg {
+    background-image: linear-gradient(rgb(105, 14, 14),rgb(56, 9, 9));
+    margin-top: 18em;
+}
+
+.layer2Content {
+    padding-top: 1em;
+    /*
+    I'm sorry Sakuya I said the P-word plz don't stab me
+    */
+}
+
+.layer2Heading {
+    font-size: 2em;
+    text-align: center;
+    color: white;
+    margin: 0.5em 1em 1.5em 1em;
+    font-family: "hakugyokurou";
+    letter-spacing: 0.07em;
+}
+
+.layer2InfoContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0 2em 1em 2em;    
+    flex-wrap: wrap;
+}
+
+.gameContainer, .fanartContainer, .musicContainer, .heyMisterContainer, .fumoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 0px;
+}
+
+.gameImage, .fanartImage, .musicVideo, .heyMisterImage, .fumoImage {
+    width: 12em;
+    height: 14em;
+    object-fit: cover;
+    border: 0.3em solid #ffffff;
+    border-radius: 1.5em;
+    box-shadow: 0 0 0.5em rgb(255, 255, 255);
+    transition: 0.3s;
+    margin: -0.5em -1em -1em -1em;
+}
+
+.gameImage:hover, .fanartImage:hover, .musicVideo:hover, .heyMisterImage:hover, .fumoImage:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 1.5em rgb(26, 172, 128);
+}
+
+.link {
+    margin: 1em 2em 0 2em;
+    border-radius: 1.5em;
+}
+
+.gameSubtext, .fanartSubtext, .musicSubtext, .heyMisterSubtext, .fumoSubtext {
+    text-align: center;
+    color: white;
+    font-size: 1.7em;
+    margin: 1em 0 1em 0;
+    font-family: "lunatic";
+}
+
+.stuff {
+    font-style: italic;
+}
+
+@media (max-width: 1000px) {
+    .layer1Bg {
+        flex-direction: column;
+    }
+    .layer1Left {
+        margin: 4em auto 0 auto;
+        width: 60vw;
+    }
+    .layer1Image {
+        width: 65vw;
+        box-shadow: 0em 0em 1em rgb(182, 182, 182);
+    }
+}
+
+@font-face {
+    font-family: "izayoi";
+    src: url(resources/izayoiMonospaced.ttf);
+}
+@font-face {
+    font-family: "sunflower";
+    src: url(resources/sunflowerHighway.otf);
+}
+@font-face {
+    font-family: "lunatic";
+    src: url(resources/lunaticSuperstar.otf);
+}
+@font-face {
+    font-family: "hakugyokurou";
+    src: url(resources/hakugyokurou.ttf);
 }
