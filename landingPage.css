@@ -29,7 +29,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 1);
     text-decoration: none;
     position: fixed;
     top: 0;
@@ -108,7 +108,7 @@ body {
 }
 
 .layer1Bg {
-    width: 90%;
+    width: 85%;
     height: 100%;
     border-radius: 1.5em;
     margin: 9em auto 0 auto;
@@ -197,12 +197,13 @@ body {
 }
 
 .layer2 {
-    margin-bottom: 9em;
+    
 }
 
 .layer2Bg {
     background-image: linear-gradient(rgb(105, 14, 14),rgb(56, 9, 9));
     margin-top: 18em;
+    
 }
 
 .layer2Content {
@@ -225,7 +226,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin: 0 2em 1em 2em;    
+    margin: 0 2em;    
     flex-wrap: wrap;
 }
 
@@ -242,14 +243,14 @@ body {
     object-fit: cover;
     border: 0.3em solid #ffffff;
     border-radius: 1.5em;
-    box-shadow: 0 0 0.5em rgb(255, 255, 255);
+    box-shadow: 0 10px 30px black;
     transition: 0.3s;
     margin: -0.5em -1em -1em -1em;
 }
 
 .gameImage:hover, .fanartImage:hover, .musicVideo:hover, .heyMisterImage:hover, .fumoImage:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 1.5em rgb(26, 172, 128);
+    box-shadow: 0 0 30px rgb(2, 173, 164);
 }
 
 .link {
@@ -268,6 +269,59 @@ body {
 .stuff {
     font-style: italic;
 }
+
+.layer3 {
+    background-image: url(resources/mokou.jpg);
+    background-size: cover;
+    object-fit: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.layer3Text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    border-radius: 1em;
+    text-shadow: 0 0 1em black;
+    font-family: "sunflower";
+    margin: 11em 0;
+}
+
+.layer3Quote {
+    text-align: center;
+    font-size: 4em;
+}
+
+.layer3QuoteFrom {
+    text-align: center;
+    margin-top: 2em;
+    font-size: 2em;
+}
+
+.layer4 {
+    height: 10em;
+}
+
+.layer4Bg {
+    background: rgb(54, 54, 54);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.layer4Content {
+    background:rgb(2, 173, 164);
+    height: 5em;
+
+}
+
+
 
 @media (max-width: 1000px) {
     .layer1Bg {
