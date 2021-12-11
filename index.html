@@ -31,13 +31,18 @@
             <img id = "audioController" src = "resources/audioControllerOn.png" onclick = "audioController(); imageChange();">
         </div>
         <div class = "rightBarContainer">
-            <a class = "about">About</a>
+            <a class = "about" href = "#">About</a>
             <img class = "separator" src = "resources/glowySquare.png">
-            <a class = "characters">Characters</a>
+            <a class = "characters" href = "#">Characters</a>
             <img class = "separator" src = "resources/glowySquare.png">
-            <a class = "music">FAQ</a>
+            <a class = "music" href = "#">FAQ</a>
             <img class = "separator" src = "resources/glowySquare.png">
-            <a class = "contact">Contact</a>
+            <a class = "contact" href = "#">Contact</a>
+            <div class = "menuHamburger">
+                <div class = "menuHamburgerBtn">
+
+                </div>
+            </div>
         </div>
     </div>
 
@@ -57,9 +62,8 @@
             <div class = "layer1Right">
                 <img class = "layer1Image" src = "resources/blossomViewing.jpg">
                 <div class = "layer1Caption">
-                    Reimu and her friends viewing cherry blossoms
+                    Reimu and friends flower viewing behind the shrine
                 </div>
-                <div class = "layer1ImageSource">Image Source: <a class = "layer1ImageSource" href = "https://www.pixiv.net/en/artworks/47004232">NEKO♨ RE.TH on pixiv</a></div>
             </div>
         </div>
     </div>
@@ -110,77 +114,23 @@
     <div class = "layer4">
         <div class = "layer4Bg">
             <div class = "layer4Content">
-                
                 <div class = "layer4Text">
                     <div class = "layer4TextHeading">
-                        
+                        Is there something strange? (Specifically in the neighborhood?)
                     </div>
                     <div class = "layer4TextSubtext">
-
+                        Then it might be a yokai! Get in touch with the maiden now for its extermination! Guaranteed!
                     </div>
                 </div>
-                <div class = "layer4DonateContainer">
-                    <div class = "layer4Donate">
-
-                    </div>
+                <div class = "layer4ContactContainer">
+                    <a class = "layer4Contact" href = "#">
+                        Contact!
+                    </a>
                 </div>
             </div>
         </div>
     </div>
+
 </body>
-<script> 
-     const audio = document.getElementById("backgroundMusic");
-
-     var hasInit = false;
-     function playMusic() {
-
-        if(!hasInit) {
-            hasInit = true;
-            audio.play();
-            }
-        }
-
-        const audioQuery = document.querySelector("audio");
-        window.addEventListener("DOMContentLoaded", event => {
-            
-            audioQuery.volume = 1;
-            audioQuery.play();
-        });
-
-        function audioController() {
-           if (!audio.paused) {
-                audio.pause();
-            }
-           else {
-               audio.play();
-           }
-        }
-
-        imageTracker = "i"
-        function imageChange() {
-            var image = document.getElementById("audioController");
-            
-
-            if (imageTracker == "i"){
-                image.src = "resources/audioControllerOff.png"
-                imageTracker = "I"
-            }
-            else {
-                image.src = "resources/audioControllerOn.png"
-                imageTracker = "i"
-            }
-        }
-
-        /*
-        var x = 0;
-        $("#backgroundMusic").bind("ended", function(){
-        x = x + 1;
-        audio.src = x%2 + ".mp3";
-        audio.load();
-        audio.play();       
-        }); 
-        */
-
-           
-    </script>
+<script src = "landingPage.js"></script>
 </html>
