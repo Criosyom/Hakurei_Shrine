@@ -7,11 +7,6 @@ body {
     margin: 0;
 }
 
-.border {
-    /* border: 2px solid white;*/
-
-}
-
 #background {
     position: fixed;
     width: 100%;
@@ -33,7 +28,7 @@ body {
     text-decoration: none;
     position: fixed;
     top: 0;
-    z-index: 3;
+    z-index: 9;
 }
 
 .leftBarContainer {
@@ -112,13 +107,30 @@ body {
 .about, .characters, .music, .contact {
     font-size: 1.1em;
     text-decoration: none;
-    color:white;
+    color:rgb(221, 221, 221);
     font-family: "izayoi";
+    position: relative;
+    padding: 0 6px;
+}
 
+.about:after, .characters:after, .music:after, .contact:after {
+    content: "";
+    position: absolute;
+    background-image: linear-gradient(to right, rgb(0, 217, 255), rgb(0, 4, 255));
+    height: 2px;
+    width: 0%;
+    left: 0;
+    bottom: -2px;
+    transition: 0.3s;
+}
+
+.about:hover:after, .characters:hover:after, .music:hover:after, .contact:hover:after {
+    width: 100%;
 }
 
 .about:hover, .characters:hover, .music:hover, .contact:hover {
-    color: rgb(202, 202, 202);
+    text-shadow: 0 0 5px rgb(59, 210, 230), 0 0 12px rgb(59, 210, 230), 0 0 20px rgb(59, 210, 230);
+    color: white;
 }
 
 .rightBarStuff.show {
@@ -183,12 +195,6 @@ body {
 
 .menuHamburger.open .menuHamburgerBtn:after {
     transform: rotate(-45deg) translate(35px, 35px);
-    
-}
-
-
-
-.layer1 {
     
 }
 
@@ -277,10 +283,6 @@ body {
     font-size: 1.1em;
 }
 
-.layer2 {
-    
-}
-
 .layer2Bg {
     background-image: linear-gradient(rgb(105, 14, 14),rgb(56, 9, 9));
     margin-top: 18em;
@@ -342,6 +344,7 @@ body {
     font-size: 1.7em;
     margin: 1em 0 1em 0;
     font-family: "lunatic";
+    z-index: 2;
 }
 
 .stuff {
@@ -356,6 +359,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    filter: brightness(1.1);
 }
 
 .layer3Text {
@@ -365,7 +369,7 @@ body {
     flex-direction: column;
     color: white;
     border-radius: 1em;
-    text-shadow: 0 0 1em black;
+    text-shadow: 0 0 1em black, 0 0 2em black;
     font-family: "hakugyokurou";
     letter-spacing: 0.1em;
     margin: 11em 0;
@@ -380,9 +384,6 @@ body {
     text-align: center;
     margin-top: 2em;
     font-size: 2em;
-}
-
-.layer4 {
 }
 
 .layer4Bg {
@@ -443,13 +444,17 @@ body {
 }
 
 .layer4Contact:hover {
-    background-image: linear-gradient(rgba(0, 171, 194, 0.6), rgba(1, 68, 68, 0.6));
+    background-image: linear-gradient(rgba(0, 171, 194, 0.7), rgba(1, 68, 68, 0.7));
 }
 
 .footerLayerBg {
     background: rgb(19, 25, 41);
     padding: 1.25em 0;
     box-shadow: 0 0 1em rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }  
 
 .footerLayerC {

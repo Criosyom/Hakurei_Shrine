@@ -1,13 +1,5 @@
 const audio = document.getElementById("backgroundMusic");
 
-var hasInit = false;
-function playMusic() {
-
-   if(!hasInit) {
-       hasInit = true;
-       audio.play();
-       }
-   }
 
    const audioQuery = document.querySelector("audio");
    window.addEventListener("DOMContentLoaded", event => {
@@ -39,16 +31,6 @@ function playMusic() {
            imageTracker = "i"
        }
    }
-
-   /*
-   var x = 0;
-   $("#backgroundMusic").bind("ended", function(){
-   x = x + 1;
-   audio.src = x%2 + ".mp3";
-   audio.load();
-   audio.play();       
-   }); 
-   */
 
    const menuBtn = document.querySelector('.menuHamburger')
    let menuOpen = false;
