@@ -61,3 +61,7 @@ function playMusic() {
            menuOpen = false;
        }
    });
+   const list = document.querySelector('.rightBarStuff');
+menuBtn.addEventListener('click', () => {
+    list.classList.toggle('show');
+});
