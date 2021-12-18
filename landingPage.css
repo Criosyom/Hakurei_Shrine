@@ -612,3 +612,13 @@ body {
     font-family: "shameimaru";
     src: url(resources/shameimaruSansAlternative.ttf);
 }
+
+.updateContainer {
+    margin-top: 10em;
+    text-align: center;
+    border: 2px solid red;
+}
+.h {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
