@@ -4,17 +4,169 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Updating</title>
     <link href = "landingPage.css" rel = "stylesheet">
+    <title>Hakurei Shrine</title>
+    <link rel="icon" href= "resources/paifang2.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
+
 <body>
-    <div class = updateContainer>
-        <div class = "h">
-            Project under reconstruction...
+    <div class = "backgroundContainer">
+        <video id = "background" muted autoplay loop> 
+            <source src = "resources/touhouBackground.mp4" type = "video/mp4"></src>
+        </video>
+
+        <audio id = "backgroundMusic" class = "bgm" src = "resources/touhouBackgroundMusicMixed2.mp3" loop></audio>
+    </div>
+
+    <div class = "headerBar">
+        <div class = "leftBarContainer">
+            <a class = "logoContainer" href = ".">
+                <div class = "logoImageContainer">
+                    <img class = "logoImage" src = "resources/redWhiteYinYang.png">
+                </div>
+                <div class = "logoHakurei">
+                    Hakurei
+                </div>
+            </a>
+            <img id = "audioController" src = "resources/audioControllerOn.png" onclick = "audioController(); imageChange();">
         </div>
-        <div class = "sub">
-            Fixing copyright issues... (; ^_^)
+        <div class="sourcesContainer">
+            <button class = "link" onclick = "showOrHide()">Sources</button>
+            <div class = "dropdownContent">
+                <div class = "aboutCopyright">
+                    Had issues in the past with copyright. Updated to make sure all the content here are credited if necessary and free to use.
+                </div>
+                <br>
+                <div class = "sourceC">First background author (MerlimAmbrosuis): <a class = "sourcesLink" href = "https://www.pixiv.net/en/users/25088958/illustrations" target = "_blank">https://www.pixiv.net/en/users/25088958/illustrations</a></div>
+                <br>
+                <div class = "sourceC">First background source: <a class = "sourcesLink" href = "https://www.youtube.com/watch?v=7zG87aNNf20&list=PL_mGxmgVfH1ORtai56pXbkWdlfRjcl1K2&index=21" target = "_blank">https://www.youtube.com/watch?v=7zG87aNNf20&list=PL_mGxmgVfH1ORtai56pXbkWdlfRjcl1K2&index=21</a> | Channel that primarily uploads open source animated backgrounds</div>
+                <br>
+                <div class = "sourceC">"Reimu be sweepin" author (ryosios): <a class = "sourcesLink" href = "https://www.pixiv.net/en/users/1508165" target = "_blank">https://www.pixiv.net/en/users/1508165</a> | His art can be used if it isn't for commercial purposes and is credited appropriately.</div>
+                <br>
+                <div class = "sourceC">Second background author (ryosios): <a class = "sourcesLink" href = "https://www.pixiv.net/en/users/1508165" target = "_blank">https://www.pixiv.net/en/users/1508165</a></div>
+                <br>
+                <div class = "sourceC">First music author (Dropの小屋): <a class = "sourcesLink" href = "https://www.muxiv.net/artist/159840" target = "_blank">https://www.muxiv.net/artist/159840</a> | Can be listened from the first music in the album</div>
+                <br>
+                <div class = "sourceC">Second music author (まいなすいょん): <a class = "sourcesLink" href = "https://twitter.com/minusiyon" target = "_blank">https://twitter.com/minusiyon</a></div>
+                <br>
+                <div class = "sourceC">Second music source: <a class = "sourcesLink" href = "https://www.youtube.com/watch?v=kUH6dLxa4xo&list=PLzjkiYUjXueukuu7iUy5lPCueWz8a7Tpg&index=23" target = "_blank">https://www.youtube.com/watch?v=kUH6dLxa4xo&list=PLzjkiYUjXueukuu7iUy5lPCueWz8a7Tpg&index=23</a></div>
+                <br>
+                <div class = "dm">If you have any concerns about the availability of any of the content here, please message me on discord | Lyrenide#3493</div>
+            </div>
+        </div>
+        <div class = "rightBarContainer">
+            <div class = "rightBarStuff">
+                <a class = "about hamburgerStuff" href = "#">About</a>
+                <img class = "separator hamburgerStuff" src = "resources/glowySquare.png">
+                <a class = "characters hamburgerStuff" href = "#">Characters</a>
+                <img class = "separator hamburgerStuff" src = "resources/glowySquare.png">
+                <a class = "music hamburgerStuff" href = "#">FAQ</a>
+                <img class = "separator hamburgerStuff" src = "resources/glowySquare.png">
+                <a class = "contact hamburgerStuff" href = "#">Contact</a>
+            </div>
+            <div class = "menuHamburger"><div class = "menuHamburgerBtn"></div></div>
         </div>
     </div>
+
+    <div class = "layer1">
+        <div class = "layer1BgSources"><a class = "layer1BgSource1" href = "https://www.pixiv.net/en/users/25088958/illustrations" target = "_blank">Background illustration by: MerlimAmbrosuis</a><br><a class = "layer1BgSource2" href = "https://www.youtube.com/watch?v=7zG87aNNf20&list=PL_mGxmgVfH1ORtai56pXbkWdlfRjcl1K2&index=21" target = "_blank">Animated by: Live Wallpaper Centre</a></div>
+        <div class = "layer1Container">
+            <div class = "layer1Left">
+                <div class = "greetings">
+                    Welcome to the Hakurei Shrine
+                </div>
+                <div class = "description">
+                    Home of Touhou Project's protagonist, Reimu Hakurei. The shrine and its maiden serves to protect the land of Gensōkyō from the outside world by maintaining the Great Hakurei Barrier and exterminating yōkai. Donations are greatly appreciated!
+                </div>
+                <div class = "donateNowContainer">
+                    <a class = "donateNow" href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ">Donate Now!</a>
+                </div>
+            </div>
+            <div class = "layer1Right">
+                <img class = "layer1Image" src = "resources/raymoo.jpg">
+                <div class = "layer1Caption">
+                    Reimu be sweepin'
+                </div>
+                <a class = "layer1Source" href = "https://www.pixiv.net/en/users/1508165" target = "_blank">Illustration by: ryosios</a>
+            </div>
+        </div>
+    </div>
+
+    <div class = "layer2">
+        <div class = "layer2Bg">
+            <div class = "layer2Content">
+                <div class = "layer2Heading">
+                    Why not come down to the Touhou rabbit hole? We've got...
+                </div>
+                <div class = "layer2InfoContainer">
+                    <div class = "gameContainer">
+                        <a class = "linkI" href = "https://www.youtube.com/watch?v=Eyc_FkCVxT0"><img class = "gameImage" src = "resources/touhouLunaNights.jpg"></a>
+                        <div class = "gameSubtext">Games!</div>
+                    </div>
+                    <div class = "fanartContainer">
+                        <a class = "linkI" href = "https://www.pixiv.net/en/users/132450"><img class = "fanartImage" src ="resources/toyosatomimiFanart.jpg"></a>
+                        <div class = "fanartSubtext">Fanart!</div>
+                        <div class = "fanartSource">by syuri22 (https://www.pixiv.net/en/users/132450)</div>
+                    </div>
+                    <div class = "musicContainer">
+                        <a class = "linkI" href = "https://www.youtube.com/watch?v=cZAyznb8Qsc"><video class = "musicVideo" src = "resources/zunpet.mp4" muted autoplay loop></video></a>
+                        <div class = "musicSubtext">Music!</div>
+                    </div>
+                    <div class = "heyMisterContainer">
+                        <a class = "linkI" href = "https://www.youtube.com/watch?v=hB8S6oKjiw8"><img class = "heyMisterImage" src = "resources/heyMister.png"></a>
+                        <div class = "heyMisterSubtext">Interesting... <span class = "stuff">"stuff"</span></div>
+                    </div>
+                    <div class = "fumoContainer">
+                        <a class = "linkI" href = "https://www.youtube.com/watch?v=eEjhL0XYPvU"><img class = "fumoImage" src = "resources/reimuOnRoomba.png"></a>
+                        <div class = "fumoSubtext">and most importantly, Fumos!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class = "layer3">
+        <a class="layer3BgSource" href = "https://www.pixiv.net/en/users/1508165" target = "_blank">Background illustration by: ryosios</a>
+        <div class = "layer3Text">
+            <div class = "layer3Quote">
+                "My god, jelly donuts are so scary."
+            </div>
+            <div class = "layer3QuoteFrom">
+                -Fujiwara no Mokou
+            </div>
+        </div>
+    </div>
+
+    <div class = "layer4">
+        <div class = "layer4Bg">
+            <div class = "layer4Content">
+                <div class = "layer4Text">
+                    <div class = "layer4TextHeading">
+                        Is there something strange? (In the neighborhood, perhaps?)
+                    </div>
+                    <div class = "layer4TextSubtext">
+                        Then it might be a yōkai! Get in touch with the maiden now for its extermination! Guaranteed! (Or she can just befriend them like always)
+                    </div>
+                </div>
+                <div class = "layer4ContactContainer">
+                    <a class = "layer4Contact" href = "#">
+                        Contact!
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class = "footerLayer">
+        <div class = "footerLayerBg">
+            <a class = "footerLayerAuthor" href = "https://github.com/Lyrenide/Hakurei_Shrine/tree/main" target = "_blank">
+                Webpage by: Lyrenide
+            </a>
+        </div>
+    </div>
+
 </body>
+
+<script src = "landingPage.js"></script>
 </html>

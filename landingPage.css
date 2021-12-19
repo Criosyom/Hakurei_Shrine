@@ -57,12 +57,13 @@ body {
     width: 5.2em;
     letter-spacing: 0.1em;
     font-family: "melancholy";
-
+    
 }
 
 .logoImageContainer {
     display: flex;
     align-items: center;
+    margin-right: 0.5em;
 }
 
 .logoImage {
@@ -74,11 +75,65 @@ body {
     height: 35px;
     cursor: pointer;
     border-radius: 100%;
-    margin-left: 2em;
+    margin: 0 1em 0 2em;
 }
 
 #audioController:hover {
     filter: brightness(0.8);
+}
+
+.sourcesContainer {
+    color: white;
+    position: absolute;
+    left: 18em;
+}
+
+.link {
+    border: none;
+    background: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.3em;
+    border: 3px solid;
+    border-radius: 1em;
+    position: relative;
+    font-family: "izayoi";
+    animation: colorChange 0.75s infinite;
+    animation-direction: alternate;
+}
+
+
+.link:hover {
+    background: white;
+}
+.dropdownContent {
+    position: absolute;
+    left: -18em;
+    top: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    display: none;
+    flex-direction: column;
+    width: 30em;
+    text-align: center;
+    color: white;
+}
+
+.aboutCopyright {
+    font-size: 1.2em;
+    color: rgb(255, 139, 139);
+}
+
+.sourcesLink {
+    position: relative;
+    color: rgb(98, 148, 255);
+    word-wrap: break-word;
+}
+
+.dm {
+    font-size: 1.2em;
+    color: rgb(211, 247, 164);
 }
 
 .rightBarContainer {
@@ -150,6 +205,7 @@ body {
     display: none;
     justify-content: center;
     align-items: center;
+    right: 2vw;
     width: 30px;
     height: 30px;
     cursor: pointer;
@@ -198,7 +254,34 @@ body {
     
 }
 
-.layer1Bg {
+.layer1 {
+    position: relative;
+}
+
+.layer1BgSources {
+    font-size: 0.9em;
+    position: absolute;
+    bottom: -19em;
+    left: 50%;
+    transform: translateX(-50%);
+    background: black;
+    padding: 7px;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.layer1BgSource1 {
+    color: white;
+
+}
+.layer1BgSource2 {
+    color: white;
+}
+
+
+.layer1Container {
     width: 85%;
     height: 100%;
     border-radius: 1.5em;
@@ -274,7 +357,7 @@ body {
 
 .layer1Image {
     width: 35vw;
-    box-shadow: 0em 0em 1em rgb(141, 141, 141);
+    
 }
 
 .layer1Caption {
@@ -283,10 +366,13 @@ body {
     font-size: 1.1em;
 }
 
+.layer1Source {
+    color: white;
+}
+
 .layer2Bg {
-    background-image: linear-gradient(rgb(105, 14, 14),rgb(56, 9, 9));
+    background-image: linear-gradient(rgb(105, 14, 14),rgb(56, 9, 9)); 
     margin-top: 18em;
-    
 }
 
 .layer2Content {
@@ -333,7 +419,14 @@ body {
     box-shadow: 0 0 30px rgb(2, 173, 164);
 }
 
-.link {
+.fanartSource {
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    margin-top: -2em;
+}
+
+.linkI {
     margin: 1em 2em 0 2em;
     border-radius: 1.5em;
 }
@@ -362,6 +455,16 @@ body {
     filter: brightness(1.1);
 }
 
+.layer3BgSource {
+    background: black;
+    border-radius: 1em;
+    position: absolute;
+    padding: 7px;
+    color: white;
+    display: block;
+    bottom: 5px;
+}
+
 .layer3Text {
     display: flex;
     justify-content: center;
@@ -387,7 +490,8 @@ body {
 }
 
 .layer4Bg {
-    background-image: linear-gradient(rgb(105, 14, 14),rgb(56, 9, 9));    display: flex;
+    background-image: linear-gradient(rgb(105, 14, 14),rgb(56, 9, 9));    
+    display: flex;
     justify-content: center;
     align-items: center;
     padding: 2.5em 0;
@@ -457,10 +561,6 @@ body {
     flex-direction: column;
 }  
 
-.footerLayerC {
-    color: white;
-    text-align: center;
-}
 .footerLayerAuthor {
     color: white;
     text-align: center;
@@ -470,7 +570,7 @@ body {
 }
 
 @media (max-width: 1100px) {
-    .layer1Bg {
+    .layer1Container {
         flex-direction: column;
     }
     .layer1Left {
@@ -482,7 +582,6 @@ body {
     }
     .layer1Image {
         width: 60vw;
-        box-shadow: 0em 0em 1em rgb(68, 68, 68);
     }
     .layer1Caption {
         font-size: 2vw;
@@ -510,7 +609,7 @@ body {
     }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 860px) {
     .rightBarStuff {
         display: none;
     }
@@ -520,8 +619,8 @@ body {
     .headerBar {
         width: 100vw;
     }
-    .layer1Caption {
-        font-size: 2.7vw;
+    .layer1Caption, .layer1Source {
+        font-size: 0.9em;
         text-align: center;
     }
     .rightBarContainer {
@@ -532,12 +631,9 @@ body {
     .layer1Image {
         width: 70vw;
     }
-    #audioController {
-        display: none;
-    }
 }
 
-@media (min-width: 761px) {
+@media (min-width: 861px) {
     .rightBarStuff {
         position: relative;
         color: white;
@@ -557,6 +653,37 @@ body {
         margin-top: -6.6em;
         width: 27em;
         background: transparent;
+    }
+}
+@media (max-width: 500px) {
+    #audioController {
+        display: none;
+    }
+    .sourcesContainer {
+        top: 3.5em;
+        left: 0
+    }
+    .dropdownContent {
+        left: 0;
+        width: 17em;
+    }
+    .aboutCopyright {
+        display: none;
+    }
+    .dm {
+        font-size: 0.8em;
+    }
+    .sourceC, .sourcesLink {
+        font-size: 0.75em;
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        background: rgb(255, 109, 109);
+    }
+    100% {
+        background: rgb(143, 0, 55);
     }
 }
 
